@@ -1,0 +1,210 @@
+{"test":[
+  [
+   null,
+   {
+   "name": "電腦輔助設計",
+   "teacher": "蕭培元",
+   "room": "資402"
+   },
+   {
+   "name": "電腦輔助設計實習",
+   "teacher": "蕭培元",
+   "room": "資402"
+   },
+   {
+   "name": "電腦輔助設計實習",
+   "teacher": "蕭培元",
+   "room": "資402"
+   },
+   {
+   "name": "資訊管理個案研討(上)",
+   "teacher": "曾筱芸",
+   "room": "藝401"
+   },
+   {
+   "name": "資訊管理個案研討(上)實習",
+   "teacher": "曾筱芸",
+   "room": "藝401"
+   },
+   null,
+   null,
+   null,
+   {
+   "name": "教學專業實習(一)",
+   "teacher": "葉明貴",
+   "room": "待排教室"
+   },
+   null,
+   null,
+   null,
+   null
+   ],
+  [
+   null,
+   null,
+   null,
+   null,
+   {
+   "name": "日文(上)",
+   "teacher": "楊嘉貞",
+   "room": "藝401"
+   },
+   {
+   "name": "日文(上)",
+   "teacher": "楊嘉貞",
+   "room": "藝401"
+   },
+   {
+   "name": "桌球(上)",
+   "teacher": "崔秀里",
+   "room": "待排教室"
+   },
+   {
+   "name": "桌球(上)",
+   "teacher": "崔秀里",
+   "room": "待排教室"
+   },
+   null,
+   {
+   "name": "教育專案實習(一)",
+   "teacher": "葉明貴",
+   "room": "待排教室"
+   },
+   null,
+   null,
+   null,
+   null
+   ],
+  [
+   null,
+   {
+   "name": "Linux系統",
+   "teacher": "楊進雄",
+   "room": "資402"
+   },
+   {
+   "name": "Linux系統",
+   "teacher": "楊進雄",
+   "room": "資402"
+   },
+   {
+   "name": "Linux系統",
+   "teacher": "楊進雄",
+   "room": "資402"
+   },
+   {
+   "name": "企業網路應用(一)",
+   "teacher": "楊新生",
+   "room": "藝401"
+   },
+   {
+   "name": "企業網路應用(一)實習",
+   "teacher": "楊新生",
+   "room": "藝401"
+   },
+   {
+   "name": "企業網路應用(一)實習",
+   "teacher": "楊新生",
+   "room": "藝401"
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+   ],
+  [
+   null,
+   {
+   "name": "管理數學(上)",
+   "teacher": "吳蘭珍",
+   "room": "藝410"
+   },
+   {
+   "name": "管理數學(上)實習",
+   "teacher": "吳蘭珍",
+   "room": "藝410"
+   },
+   {
+   "name": "管理數學(上)實習",
+   "teacher": "吳蘭珍",
+   "room": "藝410"
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+   ],
+  [
+   {
+   "name": "資訊系統專案設計三",
+   "teacher": "蘇建興",
+   "room": "待排教室"
+   },
+   {
+   "name": "資訊系統專案設計三",
+   "teacher": "蘇建興",
+   "room": "待排教室"
+   },
+   {
+   "name": "資訊系統專案設計(三)實習",
+   "teacher": "蘇建興",
+   "room": "待排教室"
+   },
+   {
+   "name": "資訊系統專案設計(三)實習",
+   "teacher": "蘇建興",
+   "room": "待排教室"
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+   ],
+  [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+   ],
+  [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+   ]
+  ]}

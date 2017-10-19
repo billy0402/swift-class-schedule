@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Class Schedule View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClassScheduleViewController" customModule="ClassSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="學號" translatesAutoresizingMaskIntoConstraints="NO" id="D74-Su-ksv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Iub-2l-Bdg"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.96470588239999999" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2e3-QK-J2S"/>
+                                </connections>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCy-00-Vfu">
+                                <rect key="frame" x="0.0" y="143" width="100" height="524"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyo-jD-6AN">
+                                <rect key="frame" x="100" y="143" width="275" height="524"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="節次" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-Y6-fjB">
+                                <rect key="frame" x="0.0" y="76" width="100" height="67"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LTj-nP-Wgi"/>
+                                    <constraint firstAttribute="width" secondItem="lkg-Y6-fjB" secondAttribute="height" multiplier="3:2" id="dtJ-QV-1WD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6D-4l-5xd">
+                                <rect key="frame" x="100" y="76" width="275" height="67"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jyo-jD-6AN" secondAttribute="trailing" id="0BX-HR-OuP"/>
+                            <constraint firstItem="o6D-4l-5xd" firstAttribute="top" secondItem="D74-Su-ksv" secondAttribute="bottom" id="11E-pA-taG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FCy-00-Vfu" secondAttribute="bottom" id="3eu-aK-tqj"/>
+                            <constraint firstItem="Jyo-jD-6AN" firstAttribute="top" secondItem="o6D-4l-5xd" secondAttribute="bottom" id="4fa-Tf-msS"/>
+                            <constraint firstItem="D74-Su-ksv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K9B-gi-Qf3"/>
+                            <constraint firstItem="Jyo-jD-6AN" firstAttribute="leading" secondItem="FCy-00-Vfu" secondAttribute="trailing" id="OM0-8A-Q9s"/>
+                            <constraint firstItem="FCy-00-Vfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RRF-bJ-39H"/>
+                            <constraint firstItem="o6D-4l-5xd" firstAttribute="height" secondItem="lkg-Y6-fjB" secondAttribute="height" id="SR4-Jc-3wz"/>
+                            <constraint firstItem="D74-Su-ksv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WVU-lA-fKw"/>
+                            <constraint firstItem="lkg-Y6-fjB" firstAttribute="top" secondItem="D74-Su-ksv" secondAttribute="bottom" id="XDG-7V-RIi"/>
+                            <constraint firstItem="FCy-00-Vfu" firstAttribute="width" secondItem="lkg-Y6-fjB" secondAttribute="width" id="bvE-ve-hqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jyo-jD-6AN" secondAttribute="bottom" id="ncx-o9-5ch"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o6D-4l-5xd" secondAttribute="trailing" id="sNV-wU-nXw"/>
+                            <constraint firstItem="o6D-4l-5xd" firstAttribute="leading" secondItem="lkg-Y6-fjB" secondAttribute="trailing" id="vs8-5V-NXx"/>
+                            <constraint firstItem="D74-Su-ksv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x6L-9V-IEp"/>
+                            <constraint firstItem="lkg-Y6-fjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yWL-Lq-pXv"/>
+                            <constraint firstItem="FCy-00-Vfu" firstAttribute="top" secondItem="o6D-4l-5xd" secondAttribute="bottom" id="zke-Dn-1fh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scheduleScrollView" destination="Jyo-jD-6AN" id="pa4-Ia-0jb"/>
+                        <outlet property="searchBar" destination="D74-Su-ksv" id="IaH-ue-0Jw"/>
+                        <outlet property="unitLabel" destination="lkg-Y6-fjB" id="UYt-yG-U5t"/>
+                        <outlet property="unitScrollView" destination="FCy-00-Vfu" id="Re3-4e-GVp"/>
+                        <outlet property="weekScrollView" destination="o6D-4l-5xd" id="DcR-Ts-C0u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="139"/>
+        </scene>
+    </scenes>
+</document>
