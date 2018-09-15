@@ -1,35 +1,35 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Moya/Core (9.0.0):
+  - Alamofire (4.7.3)
+  - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/ReactiveSwift (9.0.0):
+  - Moya/ReactiveSwift (11.0.2):
     - Moya/Core
-    - ReactiveSwift (~> 2.0)
-  - ObjectMapper (3.0.0)
-  - ReactiveSwift (2.0.1):
+    - ReactiveSwift (~> 3.0)
+  - ObjectMapper (3.3.0)
+  - ReactiveSwift (3.1.0):
     - Result (~> 3.2)
-  - Realm (3.0.0):
-    - Realm/Headers (= 3.0.0)
-  - Realm/Headers (3.0.0)
-  - RealmSwift (3.0.0):
-    - Realm (= 3.0.0)
   - Result (3.2.4)
 
 DEPENDENCIES:
   - Moya/ReactiveSwift
   - ObjectMapper
-  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - ObjectMapper
+    - ReactiveSwift
+    - Result
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
-  ReactiveSwift: 60a29ff35988a964fd2bb759755cb6594de523fc
-  Realm: dec0de73be8c57506e39db72694d513c189493b3
-  RealmSwift: 44a7090b16d1b22a406c6bf129bdd602db1bbecc
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: c835ef515633d3f0d8dd7c44cf670f57558d3d93
+PODFILE CHECKSUM: 78d70faacb075ceda69cb2bfe24fac3e15e686f8
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3

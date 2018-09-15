@@ -7,7 +7,6 @@ target 'ClassSchedule' do
 
   # Pods for ClassSchedule
   pod 'Moya/ReactiveSwift'
-  pod 'RealmSwift'
   pod 'ObjectMapper'
 
 

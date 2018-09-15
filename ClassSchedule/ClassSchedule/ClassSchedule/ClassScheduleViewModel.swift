@@ -10,22 +10,21 @@ import Foundation
 import UIKit
 import Moya
 import ObjectMapper
-import RealmSwift
 
 class ClassScheduleViewModel {
     private let provider = MoyaProvider<APIManager>()
-    private var id:String = ""
-    private var db:RealmManager?
+    private var id: String = ""
     
-    var collectionView:UICollectionView?
-    var classScheduleModels:[ClassScheduleModel] = Array<ClassScheduleModel>()
+    var collectionView: UICollectionView?
+    var classScheduleModels: [ClassScheduleModel] = Array<ClassScheduleModel>()
     
-    init(studentID id:String) {
+    init(collectionView: UICollectionView) {
+        self.collectionView = collectionView
+        getLocalData()
+    }
+    
+    func search(from id: String) {
         self.id = id
-        self.db = RealmManager(realm: try! Realm())
-//        ToDo: NO network handle
-//        let query = NSPredicate(format:"id = \(id)")
-//        let isFound = db?.read(model: ClassScheduleModel.self, condition: query, sortBy: nil)
         self.netLoadData()
     }
     
@@ -47,65 +46,32 @@ class ClassScheduleViewModel {
         }
     }
     
-    func processSuccess(_ data:Any?){
+    func processSuccess(_ data: Any?){
         // START: JSON HANDLE
         if let json = data {
-            let dic = json as! Dictionary<String,Any?>
-            if (dic["status_code"] as! Int) == 200 && (dic["success"] as! Bool){
-                
-                
-                // START: MODEL HANDLE
-                if let weak = dic["result"]{
-                    var models = [ClassScheduleModel]()
-                    for (weekIndex,week) in zip(0..., (weak as! Array<Any?>)){
-                        
-                        for (unitIndex, unit) in zip(0..., (week as! Array<Dictionary<String,String?>?>)){
-                            if let v = unit {
-                                let cours = CoursModel(value: v)
-                                //self.findCours(cours)
-                                let classSchedule = ClassScheduleModel()
-                                classSchedule.id = id
-                                classSchedule.cours = cours
-                                classSchedule.weak.value = weekIndex
-                                classSchedule.unit.value = unitIndex
-                                //dbDataCreater([cours,classSchedule])
-                                models.append(classSchedule)
-                            }else{
-                                models.append(ClassScheduleModel())
-                            }
-                        }
-                        
+            let list = json as! [[[String: Any]?]]
+            var models = [ClassScheduleModel]()
+            for (weekIndex,week) in zip(0..., list){
+                var data: [String: Any] = [:]
+                for (unitIndex, unit) in zip(0..., week){
+                    if let v = unit {
+                        data = ["id": id, "cours": v, "week": weekIndex, "unit": unitIndex]
+                    }else{
+                        data = ["id": id, "week": weekIndex, "unit": unitIndex]
                     }
-                    
-                    self.classScheduleModels = models
-                    self.reloadCollectionView()
+                    let classSchedule = ClassScheduleModel(JSON: data)
+                    models.append(classSchedule!)
                 }
-                // END: MODEL HANDLE
                 
             }
+            
+            classScheduleModels = models
+            saveToLocal()
+            reloadCollectionView()
         }
         // END: JSON HANDLE
     }
     
-    // TODO : 檢查課程是否存在 Return Model
-    func findCours(_ model:CoursModel){
-        DispatchQueue.main.async {
-            let cond = "teacher = \'\(String(describing: model.teacher!))\' AND name = \'\(String(describing: model.name!))\' AND room = \'\(String(describing: model.room!))\'"
-            let qery = NSPredicate(format: cond)
-            let m = self.db?.read(model: CoursModel.self, condition: qery, sortBy: nil)
-            print(m!)
-            
-        }
-    }
-    
-    func dbDataCreater(_ objects:[Object]){
-        DispatchQueue.main.async{
-            for object in objects{
-                
-                _ = self.db?.createOrUpdate(model: object)
-            }
-        }
-    }
     
     func reloadCollectionView(){
         collectionView?.reloadData()
@@ -121,5 +87,22 @@ class ClassScheduleViewModel {
         //return error.failureReason!
     }
     
+    private func saveToLocal() {
+        let data = try? JSONEncoder().encode(classScheduleModels)
+        
+        if let json = data {
+            let str = String(data: json, encoding: .utf8)
+            UserDefaults.standard.set(str, forKey: "ntub-app")
+        }
+    }
+    
+    private func getLocalData() {
+        let data = UserDefaults.standard.string(forKey: "ntub-app")
+        if let json = data?.data(using: .utf8) {
+            let models = try? JSONDecoder().decode([ClassScheduleModel].self, from: json)
+            classScheduleModels = models ?? []
+            reloadCollectionView()
+        }
+    }
     
 }

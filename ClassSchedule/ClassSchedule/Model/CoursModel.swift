@@ -7,29 +7,24 @@
 //
 
 import Foundation
-import RealmSwift
 import ObjectMapper
 
 /// 科目Model
-class CoursModel:Object, Mappable {
-    @objc dynamic var id: String = UUID().uuidString
-    @objc dynamic var name: String? = nil
-    @objc dynamic var teacher: String? = nil
-    @objc dynamic var room: String? = nil
+struct CoursModel: Mappable, Codable{
+    var name: String? = nil
+    var teacher: String? = nil
+    var room: String? = nil
     
-    required convenience init?(map: Map) {
-        self.init()
+    init?(map: Map) {
+        mapping(map: map)
     }
     
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         name <- map["name"]
         teacher <- map["teacher"]
         room <- map["room"]
     }
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
+
 }
 
 

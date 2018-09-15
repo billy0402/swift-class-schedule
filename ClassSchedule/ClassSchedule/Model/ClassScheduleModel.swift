@@ -7,28 +7,24 @@
 //
 
 import Foundation
-import RealmSwift
 import ObjectMapper
 
 /// 課程Model
-class ClassScheduleModel:Object, Mappable {
-    @objc dynamic var id: String = ""
-    let weak = RealmOptional<Int>()
-    let unit = RealmOptional<Int>()
-    @objc dynamic var cours: CoursModel?
+struct ClassScheduleModel: Mappable, Codable {
     
-    required convenience init?(map: Map) {
-        self.init()
+    var id: String = ""
+    var week = 0
+    var unit = 0
+    var cours: CoursModel? = nil
+    
+    init?(map: Map) {
+        mapping(map: map)
     }
     
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
-        weak.value <- map["weak"]
-        unit.value <- map["unit"]
+        week <- map["weak"]
+        unit <- map["unit"]
         cours <- map["cours"]
-    }
-    
-    override static func primaryKey() -> String? {
-        return "id"
     }
 }

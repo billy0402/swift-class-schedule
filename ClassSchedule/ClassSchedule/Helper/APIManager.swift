@@ -26,13 +26,13 @@ extension APIManager {
     }
     
     var baseURL: URL {
-        return NetURL.url(.local)
+        return NetURL.url(.main)
     }
     
     var path: String {
         switch self {
         case .getCourse(let id):
-            return "/\(id)/course/"
+            return "/personal/\(id)"
         }
     }
 

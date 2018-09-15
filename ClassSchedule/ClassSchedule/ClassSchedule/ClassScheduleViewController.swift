@@ -19,7 +19,9 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
     var upCol : UICollectionView!
     var leftCol : UICollectionView!
     var centerCol : UICollectionView!
-    var viewModel:ClassScheduleViewModel?
+    lazy var viewModel = {
+        return ClassScheduleViewModel(collectionView: self.centerCol)
+    }()
     var viewModelObserver: NSKeyValueObservation!
     
     let units = ["一", "二", "三", "四", "五", "六", "日"]
@@ -44,9 +46,10 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.layoutIfNeeded()
         // Do any additional setup after loading the view.
+        searchBar.delegate = self
         setView()
+        viewModel.reloadCollectionView()
     }
     
     func setView(){
@@ -146,17 +149,15 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
                 cell.teacher.text = ""
             }
             
-            guard viewModel?.classScheduleModels.count != 0,
-                let classSchedule = viewModel?.classScheduleModels[indexPath.row],
-                let cours = classSchedule.cours else{
-                    
-                    
+            guard viewModel.classScheduleModels.count != 0 else{
                 resetCell()
                 return cell
             }
+            
+            let classSchedule = viewModel.classScheduleModels[indexPath.row]
+            let cours = classSchedule.cours
+            
             courseCellGetData(cell, data: cours)
-            
-            
             
             return cell
         }else{
@@ -172,11 +173,10 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
         
     }
     
-    func courseCellGetData(_ cell:CourseCollectionViewCell,data:CoursModel){
-        cell.name.text = data.name
-        cell.room.text = data.room
-        
-        cell.teacher.text = data.teacher
+    func courseCellGetData(_ cell: CourseCollectionViewCell,data: CoursModel?){
+        cell.name.text = data?.name ?? ""
+        cell.room.text = data?.room ?? ""
+        cell.teacher.text = data?.teacher ?? ""
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -185,16 +185,15 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.characters.count > 4 {
+        if searchText.count > 4 {
             // TODO: 學號格式驗證
-            viewModel = ClassScheduleViewModel(studentID: searchText)
-            
-            // Collection View 綁定
-            viewModel!.collectionView = centerCol
+            viewModel.search(from: searchText)
         }
     }
 
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 
