@@ -1,0 +1,3 @@
+[submodule "ClassSchedule/iOS-ClassSchedule-Fastlane"]
+	path = ClassSchedule/iOS-ClassSchedule-Fastlane
+	url = https://github.com/JiaWeiXie/iOS-ClassSchedule-Fastlane.git
