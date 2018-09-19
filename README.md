@@ -1,16 +1,15 @@
-# iOS-ClassSchedule
+# iOS-ClassSchedule 北商課表App
 
-## Django Server
-[https://github.com/arthurc0102/NTUB-APP-server](https://github.com/arthurc0102/NTUB-APP-server)
+## API
+[https://github.com/arthurc0102/ntub-class-table-api](https://github.com/arthurc0102/ntub-class-table-api)
 
 ## Tools
 
-* Swift 4
-* Xcode 9
+* Swift 4.1
+* Xcode 10
 * MVVM
-* ReactiveSwift
 * Moya
-* RealmSwift
+* fastlane
 
 
 
