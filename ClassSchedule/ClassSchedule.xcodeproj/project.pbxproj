@@ -10,6 +10,7 @@
 		31C9D5C48BF2516BBAD6EC65 /* Pods_ClassSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3973D810F0F269199953AC65 /* Pods_ClassSchedule.framework */; };
 		AF1E214B1F90B86100D50AB2 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E214A1F90B86100D50AB2 /* ClassScheduleViewController.swift */; };
 		AF3EDE5E1F963A8000B49C03 /* ClassScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EDE5D1F963A8000B49C03 /* ClassScheduleModel.swift */; };
+		AF649A4B214D41250022B090 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A4A214D41250022B090 /* UIColor+Custom.swift */; };
 		AF64B6281F94D15C00C92D39 /* ClassScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64B6271F94D15C00C92D39 /* ClassScheduleViewModel.swift */; };
 		AF64B62B1F94D42E00C92D39 /* CoursModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64B62A1F94D42E00C92D39 /* CoursModel.swift */; };
 		AF77053F1F918A3300C3DE41 /* NetURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77053E1F918A3300C3DE41 /* NetURL.swift */; };
@@ -32,6 +33,7 @@
 		AF1E214A1F90B86100D50AB2 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
 		AF39B6721F96663700EC0F12 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3EDE5D1F963A8000B49C03 /* ClassScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleModel.swift; sourceTree = "<group>"; };
+		AF649A4A214D41250022B090 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		AF64B6271F94D15C00C92D39 /* ClassScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewModel.swift; sourceTree = "<group>"; };
 		AF64B62A1F94D42E00C92D39 /* CoursModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursModel.swift; sourceTree = "<group>"; };
 		AF64B62D1F94D9D900C92D39 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 			children = (
 				AF9CCA221F90FD15001FBD70 /* APIManager.swift */,
 				AF77053E1F918A3300C3DE41 /* NetURL.swift */,
+				AF649A4A214D41250022B090 /* UIColor+Custom.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				AF3EDE5E1F963A8000B49C03 /* ClassScheduleModel.swift in Sources */,
 				AF77053F1F918A3300C3DE41 /* NetURL.swift in Sources */,
 				AF9CCA1F1F90CDEB001FBD70 /* OutSideCollectionViewCell.swift in Sources */,
+				AF649A4B214D41250022B090 /* UIColor+Custom.swift in Sources */,
 				AFFE55F41F8E30A40075736A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

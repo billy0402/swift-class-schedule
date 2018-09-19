@@ -15,7 +15,7 @@ class OutSideCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         item.text = ""
-        layer.borderColor = UIColor(red:135/255.0, green:222/255.0, blue:213/255.0, alpha: 1).cgColor
+        layer.borderColor = UIColor.primaryLight.cgColor
         layer.borderWidth = 0.5
     }
 

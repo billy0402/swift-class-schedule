@@ -93,9 +93,9 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
         centerCol.dataSource = self
         
         
-        upCol.backgroundColor = UIColor(red:246/255.0, green:255/255.0, blue:247/255.0, alpha: 1)
-        leftCol.backgroundColor = UIColor(red:246/255.0, green:255/255.0, blue:247/255.0, alpha: 1)
-        centerCol.backgroundColor = UIColor.clear
+        upCol.backgroundColor = UIColor.secondary
+        leftCol.backgroundColor = UIColor.secondary
+        centerCol.backgroundColor = UIColor.secondaryLight
         
         weekScrollView.addSubview(upCol)
         unitScrollView.addSubview(leftCol)
@@ -109,7 +109,8 @@ class ClassScheduleViewController: UIViewController,UICollectionViewDelegate,UIC
         scheduleScrollView.contentSize.height = baseW * colLeft
         
         unitLabel.layer.borderWidth = 0.5
-        unitLabel.layer.borderColor = UIColor(red:135/255.0, green:222/255.0, blue:213/255.0, alpha: 1).cgColor
+        unitLabel.layer.borderColor = UIColor.primaryLight.cgColor
+        unitLabel.backgroundColor = UIColor.secondary
     }
 
     override func didReceiveMemoryWarning() {

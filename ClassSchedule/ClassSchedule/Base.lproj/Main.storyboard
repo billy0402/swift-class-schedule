@@ -23,7 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Iub-2l-Bdg"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.96470588239999999" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.24705882352941178" green="0.24313725490196078" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -41,7 +41,7 @@
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="節次" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-Y6-fjB">
                                 <rect key="frame" x="0.0" y="76" width="100" height="66.5"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.73725490196078436" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LTj-nP-Wgi"/>
                                     <constraint firstAttribute="width" secondItem="lkg-Y6-fjB" secondAttribute="height" multiplier="3:2" id="dtJ-QV-1WD"/>
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="100" y="76" width="275" height="66.5"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jyo-jD-6AN" secondAttribute="trailing" id="0BX-HR-OuP"/>
                             <constraint firstItem="o6D-4l-5xd" firstAttribute="top" secondItem="D74-Su-ksv" secondAttribute="bottom" id="11E-pA-taG"/>
