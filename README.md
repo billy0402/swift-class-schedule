@@ -11,6 +11,44 @@
 * Moya
 * fastlane
 
+## Setup env
+
+1. Install gem
+
+2. Install cocoapods
+
+```
+sudo gem install cocoapods
+```
+
+3. Install packages
+
+```
+pod install
+```
+
+4. Install fastlane
+
+```
+xcode-select --install
+
+sudo gem install fastlane -NV
+```
+
+5. Get fastlane file
+
+```
+git submodule init
+
+git submodule update
+```
+
+6. Setup development
+
+```
+fastlane match development
+```
+
 
 
 
