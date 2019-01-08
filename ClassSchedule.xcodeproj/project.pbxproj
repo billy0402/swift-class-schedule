@@ -169,7 +169,7 @@
 				AF64B6291F94D40D00C92D39 /* Model */,
 				AF9CCA211F90FAF9001FBD70 /* Helper */,
 				AF1E21491F90B82700D50AB2 /* ClassSchedule */,
-				AFFE56071F8E34A30075736A /* cell */,
+				AFFE56071F8E34A30075736A /* Cell */,
 				AFFE55F31F8E30A40075736A /* AppDelegate.swift */,
 				AFFE55F71F8E30A40075736A /* Main.storyboard */,
 				AFFE55FA1F8E30A40075736A /* Assets.xcassets */,
@@ -180,13 +180,13 @@
 			path = ClassSchedule;
 			sourceTree = "<group>";
 		};
-		AFFE56071F8E34A30075736A /* cell */ = {
+		AFFE56071F8E34A30075736A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				AF9CCA1C1F90CD64001FBD70 /* OutSide */,
 				AF9CCA1B1F90CD5A001FBD70 /* Course */,
 			);
-			path = cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
