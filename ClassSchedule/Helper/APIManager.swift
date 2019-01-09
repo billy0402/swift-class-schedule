@@ -6,24 +6,13 @@
 //  Copyright © 2017年 BIRC. All rights reserved.
 //
 
-import Foundation
 import Moya
 
-enum APIManager: TargetType {
+enum APIManager {
     case getCourse(String)
 }
 
-extension APIManager {
-    var task: Task {
-        switch self {
-        default:
-            return .requestPlain
-        }
-    }
-    
-    var headers: [String : String]? {
-        return ["Content-Type":"application/json"]
-    }
+extension APIManager: TargetType {
     
     var baseURL: URL {
         return NetURL.url(.main)
@@ -35,26 +24,38 @@ extension APIManager {
             return "/personal/\(id)"
         }
     }
-
+    
     var method: Moya.Method {
         switch self {
         default:
             return .get
         }
     }
-
+    
+    var task: Task {
+        switch self {
+        default:
+            return .requestPlain
+        }
+    }
+    
+    var sampleData: Data {
+        return "".data(using: String.Encoding.utf8)!
+    }
+    
+    var headers: [String : String]? {
+        return ["Content-Type": "application/json"]
+    }
+    
     var parameters: [String : AnyObject]? {
         switch self {
         default:
             return nil
         }
     }
-    var sampleData: Data {
-        return "{}".data(using: String.Encoding.utf8)! as Data
-    }
     
     var multipartBody: [MultipartFormData]? {
         return nil
     }
+    
 }
-

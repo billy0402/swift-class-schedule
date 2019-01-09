@@ -85,10 +85,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="scheduleScrollView" destination="Jyo-jD-6AN" id="pa4-Ia-0jb"/>
+                        <outlet property="courseScrollView" destination="Jyo-jD-6AN" id="pa4-Ia-0jb"/>
                         <outlet property="searchBar" destination="D74-Su-ksv" id="IaH-ue-0Jw"/>
-                        <outlet property="unitLabel" destination="lkg-Y6-fjB" id="UYt-yG-U5t"/>
-                        <outlet property="unitScrollView" destination="FCy-00-Vfu" id="Re3-4e-GVp"/>
+                        <outlet property="sessionLabel" destination="lkg-Y6-fjB" id="UYt-yG-U5t"/>
+                        <outlet property="sessionScrollView" destination="FCy-00-Vfu" id="Re3-4e-GVp"/>
                         <outlet property="weekScrollView" destination="o6D-4l-5xd" id="DcR-Ts-C0u"/>
                     </connections>
                 </viewController>
