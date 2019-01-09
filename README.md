@@ -5,10 +5,10 @@
 
 ## Tools
 
-* Swift 4.1
-* Xcode 10
+* Swift 4.2
+* Xcode 10.1
 * MVVM
-* Moya
+* Moya/RxSwift
 * fastlane
 
 ## Setup env
@@ -48,9 +48,3 @@ git submodule update
 ```
 fastlane match development
 ```
-
-
-
-
-
-
