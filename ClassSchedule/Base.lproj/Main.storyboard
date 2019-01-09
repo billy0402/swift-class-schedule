@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8e6-xK-2cH" customClass="SearchBarBg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                <color key="backgroundColor" red="0.31552886959999998" green="0.32337051630000002" blue="0.58043968680000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                             <searchBar contentMode="redraw" placeholder="學號" translatesAutoresizingMaskIntoConstraints="NO" id="D74-Su-ksv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <constraints>
@@ -58,20 +62,24 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jyo-jD-6AN" secondAttribute="trailing" id="0BX-HR-OuP"/>
                             <constraint firstItem="o6D-4l-5xd" firstAttribute="top" secondItem="D74-Su-ksv" secondAttribute="bottom" id="11E-pA-taG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FCy-00-Vfu" secondAttribute="bottom" id="3eu-aK-tqj"/>
+                            <constraint firstAttribute="bottom" secondItem="FCy-00-Vfu" secondAttribute="bottom" id="3eu-aK-tqj"/>
                             <constraint firstItem="Jyo-jD-6AN" firstAttribute="top" secondItem="o6D-4l-5xd" secondAttribute="bottom" id="4fa-Tf-msS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8e6-xK-2cH" secondAttribute="trailing" id="ITx-VG-dWC"/>
                             <constraint firstItem="D74-Su-ksv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K9B-gi-Qf3"/>
                             <constraint firstItem="Jyo-jD-6AN" firstAttribute="leading" secondItem="FCy-00-Vfu" secondAttribute="trailing" id="OM0-8A-Q9s"/>
                             <constraint firstItem="FCy-00-Vfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RRF-bJ-39H"/>
                             <constraint firstItem="o6D-4l-5xd" firstAttribute="height" secondItem="lkg-Y6-fjB" secondAttribute="height" id="SR4-Jc-3wz"/>
                             <constraint firstItem="D74-Su-ksv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WVU-lA-fKw"/>
+                            <constraint firstItem="8e6-xK-2cH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ws1-J4-meh"/>
                             <constraint firstItem="lkg-Y6-fjB" firstAttribute="top" secondItem="D74-Su-ksv" secondAttribute="bottom" id="XDG-7V-RIi"/>
                             <constraint firstItem="FCy-00-Vfu" firstAttribute="width" secondItem="lkg-Y6-fjB" secondAttribute="width" id="bvE-ve-hqt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jyo-jD-6AN" secondAttribute="bottom" id="ncx-o9-5ch"/>
+                            <constraint firstAttribute="bottom" secondItem="Jyo-jD-6AN" secondAttribute="bottom" id="ncx-o9-5ch"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o6D-4l-5xd" secondAttribute="trailing" id="sNV-wU-nXw"/>
+                            <constraint firstItem="lkg-Y6-fjB" firstAttribute="top" secondItem="8e6-xK-2cH" secondAttribute="bottom" id="uHA-10-Rcu"/>
                             <constraint firstItem="o6D-4l-5xd" firstAttribute="leading" secondItem="lkg-Y6-fjB" secondAttribute="trailing" id="vs8-5V-NXx"/>
                             <constraint firstItem="D74-Su-ksv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x6L-9V-IEp"/>
                             <constraint firstItem="lkg-Y6-fjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yWL-Lq-pXv"/>
+                            <constraint firstItem="8e6-xK-2cH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ynN-ty-tU6"/>
                             <constraint firstItem="FCy-00-Vfu" firstAttribute="top" secondItem="o6D-4l-5xd" secondAttribute="bottom" id="zke-Dn-1fh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
