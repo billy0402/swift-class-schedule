@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 import RxSwift
 import Moya
+import RxMoya
 
 class ClassScheduleViewModel {
-    
+
     private let provider = MoyaProvider<APIManager>()
     private var id: String = ""
     var curriculumModel: CurriculumModel?
@@ -32,23 +34,23 @@ class ClassScheduleViewModel {
             "第十三節\n20:15\n21:00",
             "第十四節\n21:05\n21:50"
         ]
-    var courseModels = Array<CourseModel>()
+    var courseModels = [CourseModel]()
     private var disposeBag = DisposeBag()
-    
+
     var sessionCol: UICollectionView?
     var courseCol: UICollectionView?
-    
+
     init(sessionCol: UICollectionView, courseCol: UICollectionView) {
         self.sessionCol = sessionCol
         self.courseCol = courseCol
         getLocalData()
     }
-    
+
     func search(from id: String) {
         self.id = id
         self.loadCurriculumData()
     }
-    
+
     func loadCurriculumData() {
         provider.rx.request(.getCourse(id))
             .filterSuccessfulStatusCodes()
@@ -60,13 +62,13 @@ class ClassScheduleViewModel {
             })
             .disposed(by: disposeBag)
     }
-    
+
     func processSuccess(_ data: CurriculumModel?) {
         // START: JSON HANDLE
         if let curriculum = data {
             sessionModels.removeAll()
             courseModels.removeAll()
-            
+
             if let sessionList = curriculum.sessions as? [SessionModel] {
                 for session in sessionList {
                     let sessionNo = session.sessionNo ?? ""
@@ -76,7 +78,7 @@ class ClassScheduleViewModel {
                     sessionModels.append(sessionInfo)
                 }
             }
-            
+
             if let courseList = curriculum.subjects {
                 for (week, daySubjects) in zip(0..., courseList) {
                     for (session, subject) in zip(0..., daySubjects) {
@@ -85,48 +87,47 @@ class ClassScheduleViewModel {
                     }
                 }
             }
-            
+
             saveToLocal()
             reloadCollectionView()
         }
         // END: JSON HANDLE
     }
-    
-    func reloadCollectionView(){
+
+    func reloadCollectionView() {
         sessionCol?.reloadData()
         courseCol?.reloadData()
     }
-    
+
     private func saveToLocal() {
         let sessionData = try? JSONEncoder().encode(sessionModels)
         let courseData = try? JSONEncoder().encode(courseModels)
-        
+
         if let data = sessionData {
             UserDefaults.standard.set(data, forKey: "ntub-session")
         }
-        
+
         if let data = courseData {
             UserDefaults.standard.set(data, forKey: "ntub-course")
         }
     }
-    
+
     private func getLocalData() {
         if let sessionData = UserDefaults.standard.data(forKey: "ntub-session") {
             if let models = try? JSONDecoder().decode([String].self, from: sessionData) {
                 sessionModels = models
             }
         }
-        
+
         if let courseData = UserDefaults.standard.data(forKey: "ntub-course") {
             if let models = try? JSONDecoder().decode([CourseModel].self, from: courseData) {
                 courseModels = models
             }
         }
-        
+
         if !sessionModels.isEmpty || !courseModels.isEmpty {
             reloadCollectionView()
         }
     }
-    
-}
 
+}

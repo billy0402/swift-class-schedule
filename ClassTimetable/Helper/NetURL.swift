@@ -9,12 +9,12 @@
 import Foundation
 
 struct NetURL {
-    enum NetAddress:String {
+    enum NetAddress: String {
         case local = "http://127.0.0.1:8000"
         case main = "https://ntub-class.herokuapp.com"
     }
-    
-    static func url(_ address:NetAddress)->URL{
+
+    static func url(_ address: NetAddress) -> URL {
         return URL(string: address.rawValue)!
     }
 }

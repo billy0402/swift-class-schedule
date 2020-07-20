@@ -10,9 +10,9 @@ import Foundation
 
 /// 科目Model
 struct SubjectModel: Codable {
-    
-    var name: String? = nil
-    var teacher: String? = nil
-    var room: String? = nil
-    
+
+    var name: String?
+    var teacher: String?
+    var room: String?
+
 }

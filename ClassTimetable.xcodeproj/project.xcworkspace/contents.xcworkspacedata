@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ClassSchedule.xcodeproj">
+      location = "self:ClassTimetable.xcodeproj">
    </FileRef>
 </Workspace>

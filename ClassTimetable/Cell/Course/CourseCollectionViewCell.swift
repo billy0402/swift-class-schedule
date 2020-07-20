@@ -18,7 +18,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
         name.text = ""
         teacher.text = ""
         room.text = ""
-        
+
         layer.borderColor = UIColor.primaryLight.cgColor
         layer.borderWidth = 0.5
     }

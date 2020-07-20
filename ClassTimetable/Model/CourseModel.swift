@@ -10,9 +10,9 @@ import Foundation
 
 /// 課程Model
 struct CourseModel: Codable {
-    
+
     var week: Int
     var session: Int
-    var subject: SubjectModel? = nil
-    
+    var subject: SubjectModel?
+
 }

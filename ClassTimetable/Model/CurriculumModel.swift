@@ -10,13 +10,13 @@ import Foundation
 
 /// 課表Model
 struct CurriculumModel: Codable {
-    
-    var sessions: [SessionModel?]? = nil
-    var subjects: [[SubjectModel?]]? = nil
-    
+
+    var sessions: [SessionModel?]?
+    var subjects: [[SubjectModel?]]?
+
     private enum CodingKeys: String, CodingKey {
         case sessions = "time"
         case subjects = "class"
     }
-    
+
 }
