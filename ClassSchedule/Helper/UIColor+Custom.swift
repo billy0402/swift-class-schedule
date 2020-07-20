@@ -3,7 +3,7 @@
 //  ClassSchedule
 //
 //  Created by 謝佳瑋 on 2018/9/15.
-//  Copyright © 2018年 BIRC. All rights reserved.
+//  Copyright © 2018年 NTUB. All rights reserved.
 //
 
 import UIKit

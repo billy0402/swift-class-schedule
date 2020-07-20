@@ -3,7 +3,7 @@
 //  ClassSchedule
 //
 //  Created by User on 2019/1/9.
-//  Copyright © 2019 BIRC. All rights reserved.
+//  Copyright © 2019 NTUB. All rights reserved.
 //
 
 import Foundation
