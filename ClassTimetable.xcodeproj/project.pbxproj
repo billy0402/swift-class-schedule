@@ -10,6 +10,7 @@
 		CE3361A024C55BD0005AC634 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CE33619F24C55BD0005AC634 /* Moya */; };
 		CE3361A224C55BD0005AC634 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CE3361A124C55BD0005AC634 /* RxMoya */; };
 		CE6E90EE24C698FA002B739A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E90F024C698FA002B739A /* Main.storyboard */; };
+		CE6E90F224C69BBC002B739A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E90F124C69BBC002B739A /* ContentView.swift */; };
 		CECE5D6124C5052100336672 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5D6024C5052100336672 /* AppDelegate.swift */; };
 		CECE5D6324C5052100336672 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5D6224C5052100336672 /* SceneDelegate.swift */; };
 		CECE5D6724C5052200336672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECE5D6624C5052200336672 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		CE6E90EF24C698FA002B739A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE6E90F124C69BBC002B739A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CECE5D5D24C5052100336672 /* ClassTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE5D6024C5052100336672 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECE5D6224C5052100336672 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				CECE5E4824C5525800336672 /* Fixtures */,
 				CECE5D6024C5052100336672 /* AppDelegate.swift */,
 				CECE5D6224C5052100336672 /* SceneDelegate.swift */,
+				CE6E90F124C69BBC002B739A /* ContentView.swift */,
 				CE6E90F024C698FA002B739A /* Main.storyboard */,
 				CECE5D6624C5052200336672 /* Assets.xcassets */,
 				CECE5D6B24C5052200336672 /* LaunchScreen.storyboard */,
@@ -413,6 +416,7 @@
 			files = (
 				CECE5E2C24C551E900336672 /* CourseModel.swift in Sources */,
 				CECE5E3D24C5520A00336672 /* ClassScheduleViewModel.swift in Sources */,
+				CE6E90F224C69BBC002B739A /* ContentView.swift in Sources */,
 				CECE5E4324C5524100336672 /* UIColor+Custom.swift in Sources */,
 				CECE5E3524C551F800336672 /* CourseCollectionViewCell.swift in Sources */,
 				CECE5D6124C5052100336672 /* AppDelegate.swift in Sources */,
