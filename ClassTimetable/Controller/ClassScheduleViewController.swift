@@ -170,7 +170,7 @@ extension ClassScheduleViewController: UICollectionViewDelegateFlowLayout, UICol
 
     }
 
-    func courseCellGetData(_ cell: CourseCollectionViewCell, data: SubjectModel?) {
+    func courseCellGetData(_ cell: CourseCollectionViewCell, data: Subject?) {
         cell.name.text = data?.name ?? ""
         cell.teacher.text = data?.teacher ?? ""
         cell.room.text = data?.room ?? ""

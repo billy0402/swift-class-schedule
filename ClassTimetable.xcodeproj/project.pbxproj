@@ -19,10 +19,10 @@
 		CECE5D6D24C5052200336672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECE5D6B24C5052200336672 /* LaunchScreen.storyboard */; };
 		CECE5D7824C5052200336672 /* ClassTimetableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5D7724C5052200336672 /* ClassTimetableTests.swift */; };
 		CECE5D8324C5052200336672 /* ClassTimetableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5D8224C5052200336672 /* ClassTimetableUITests.swift */; };
-		CECE5E2A24C551E900336672 /* SubjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2624C551E900336672 /* SubjectModel.swift */; };
-		CECE5E2B24C551E900336672 /* CurriculumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2724C551E900336672 /* CurriculumModel.swift */; };
-		CECE5E2C24C551E900336672 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2824C551E900336672 /* CourseModel.swift */; };
-		CECE5E2D24C551E900336672 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2924C551E900336672 /* SessionModel.swift */; };
+		CECE5E2A24C551E900336672 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2624C551E900336672 /* Subject.swift */; };
+		CECE5E2B24C551E900336672 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2724C551E900336672 /* Timetable.swift */; };
+		CECE5E2C24C551E900336672 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2824C551E900336672 /* Course.swift */; };
+		CECE5E2D24C551E900336672 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E2924C551E900336672 /* Period.swift */; };
 		CECE5E3524C551F800336672 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E3024C551F800336672 /* CourseCollectionViewCell.swift */; };
 		CECE5E3624C551F800336672 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECE5E3124C551F800336672 /* CourseCollectionViewCell.xib */; };
 		CECE5E3724C551F800336672 /* OutSideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5E3324C551F800336672 /* OutSideCollectionViewCell.swift */; };
@@ -69,10 +69,10 @@
 		CECE5D7E24C5052200336672 /* ClassTimetableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassTimetableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE5D8224C5052200336672 /* ClassTimetableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimetableUITests.swift; sourceTree = "<group>"; };
 		CECE5D8424C5052200336672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CECE5E2624C551E900336672 /* SubjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectModel.swift; sourceTree = "<group>"; };
-		CECE5E2724C551E900336672 /* CurriculumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurriculumModel.swift; sourceTree = "<group>"; };
-		CECE5E2824C551E900336672 /* CourseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
-		CECE5E2924C551E900336672 /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		CECE5E2624C551E900336672 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		CECE5E2724C551E900336672 /* Timetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
+		CECE5E2824C551E900336672 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		CECE5E2924C551E900336672 /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		CECE5E3024C551F800336672 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		CECE5E3124C551F800336672 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		CECE5E3324C551F800336672 /* OutSideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutSideCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -193,10 +193,10 @@
 		CECE5E2524C551E900336672 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CECE5E2624C551E900336672 /* SubjectModel.swift */,
-				CECE5E2724C551E900336672 /* CurriculumModel.swift */,
-				CECE5E2824C551E900336672 /* CourseModel.swift */,
-				CECE5E2924C551E900336672 /* SessionModel.swift */,
+				CECE5E2924C551E900336672 /* Period.swift */,
+				CECE5E2624C551E900336672 /* Subject.swift */,
+				CECE5E2724C551E900336672 /* Timetable.swift */,
+				CECE5E2824C551E900336672 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -425,7 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECE5E2C24C551E900336672 /* CourseModel.swift in Sources */,
+				CECE5E2C24C551E900336672 /* Course.swift in Sources */,
 				CECE5E3D24C5520A00336672 /* ClassScheduleViewModel.swift in Sources */,
 				CE6E90F424C6C3BE002B739A /* SearchBar.swift in Sources */,
 				CE6E90F224C69BBC002B739A /* ContentView.swift in Sources */,
@@ -435,10 +435,10 @@
 				CECE5D6324C5052100336672 /* SceneDelegate.swift in Sources */,
 				CECE5E4524C5524100336672 /* APIManager.swift in Sources */,
 				CECE5E3724C551F800336672 /* OutSideCollectionViewCell.swift in Sources */,
-				CECE5E2A24C551E900336672 /* SubjectModel.swift in Sources */,
+				CECE5E2A24C551E900336672 /* Subject.swift in Sources */,
 				CECE5E3C24C5520A00336672 /* ClassScheduleViewController.swift in Sources */,
-				CECE5E2B24C551E900336672 /* CurriculumModel.swift in Sources */,
-				CECE5E2D24C551E900336672 /* SessionModel.swift in Sources */,
+				CECE5E2B24C551E900336672 /* Timetable.swift in Sources */,
+				CECE5E2D24C551E900336672 /* Period.swift in Sources */,
 				CECE5E4424C5524100336672 /* NetURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

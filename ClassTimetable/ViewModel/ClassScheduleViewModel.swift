@@ -16,7 +16,7 @@ class ClassScheduleViewModel {
 
     private let provider = MoyaProvider<APIManager>()
     private var id: String = ""
-    var curriculumModel: CurriculumModel?
+    var curriculumModel: Timetable?
     var sessionModels =
         [
             "第一節\n08:10\n09:00",
@@ -34,7 +34,7 @@ class ClassScheduleViewModel {
             "第十三節\n20:15\n21:00",
             "第十四節\n21:05\n21:50"
         ]
-    var courseModels = [CourseModel]()
+    var courseModels = [Course]()
     private var disposeBag = DisposeBag()
 
     var sessionCol: UICollectionView?
@@ -54,7 +54,7 @@ class ClassScheduleViewModel {
     func loadCurriculumData() {
         provider.rx.request(.getCourse(id))
             .filterSuccessfulStatusCodes()
-            .map(CurriculumModel?.self)
+            .map(Timetable?.self)
             .asObservable()
             .catchErrorJustReturn(nil)
             .subscribe(onNext: { [unowned self] data in
@@ -63,15 +63,15 @@ class ClassScheduleViewModel {
             .disposed(by: disposeBag)
     }
 
-    func processSuccess(_ data: CurriculumModel?) {
+    func processSuccess(_ data: Timetable?) {
         // START: JSON HANDLE
         if let curriculum = data {
             sessionModels.removeAll()
             courseModels.removeAll()
 
-            if let sessionList = curriculum.sessions as? [SessionModel] {
+            if let sessionList = curriculum.periods as? [Period] {
                 for session in sessionList {
-                    let sessionNo = session.sessionNo ?? ""
+                    let sessionNo = session.periodNo ?? ""
                     let startTime = session.startTime ?? ""
                     let endTime = session.endTime ?? ""
                     let sessionInfo = "\(sessionNo)\n\(startTime)\n\(endTime)"
@@ -82,7 +82,7 @@ class ClassScheduleViewModel {
             if let courseList = curriculum.subjects {
                 for (week, daySubjects) in zip(0..., courseList) {
                     for (session, subject) in zip(0..., daySubjects) {
-                        let courseInfo = CourseModel.init(week: week, session: session, subject: subject)
+                        let courseInfo = Course.init(week: week, period: session, subject: subject)
                         courseModels.append(courseInfo)
                     }
                 }
@@ -120,7 +120,7 @@ class ClassScheduleViewModel {
         }
 
         if let courseData = UserDefaults.standard.data(forKey: "ntub-course") {
-            if let models = try? JSONDecoder().decode([CourseModel].self, from: courseData) {
+            if let models = try? JSONDecoder().decode([Course].self, from: courseData) {
                 courseModels = models
             }
         }

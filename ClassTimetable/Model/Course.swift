@@ -1,6 +1,6 @@
 //
-//  CourseModel.swift
-//  ClassSchedule
+//  Course.swift
+//  ClassTimetable
 //
 //  Created by 謝佳瑋 on 2017/10/17.
 //  Copyright © 2017年 NTUB. All rights reserved.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-/// 課程Model
-struct CourseModel: Codable {
+/// 課程
+struct Course: Codable {
 
     var week: Int
-    var session: Int
-    var subject: SubjectModel?
+    var period: Int
+    var subject: Subject?
 
 }
