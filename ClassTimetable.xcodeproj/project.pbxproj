@@ -11,6 +11,7 @@
 		CE3361A224C55BD0005AC634 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CE3361A124C55BD0005AC634 /* RxMoya */; };
 		CE6E90EE24C698FA002B739A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E90F024C698FA002B739A /* Main.storyboard */; };
 		CE6E90F224C69BBC002B739A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E90F124C69BBC002B739A /* ContentView.swift */; };
+		CE6E90F424C6C3BE002B739A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E90F324C6C3BE002B739A /* SearchBar.swift */; };
 		CECE5D6124C5052100336672 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5D6024C5052100336672 /* AppDelegate.swift */; };
 		CECE5D6324C5052100336672 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5D6224C5052100336672 /* SceneDelegate.swift */; };
 		CECE5D6724C5052200336672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECE5D6624C5052200336672 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		CE6E90EF24C698FA002B739A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6E90F124C69BBC002B739A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE6E90F324C6C3BE002B739A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CECE5D5D24C5052100336672 /* ClassTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE5D6024C5052100336672 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECE5D6224C5052100336672 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE6E90F524C6C474002B739A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E90F324C6C3BE002B739A /* SearchBar.swift */,
+				CE6E90F124C69BBC002B739A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CECE5D5424C5052100336672 = {
 			isa = PBXGroup;
 			children = (
@@ -136,13 +147,13 @@
 			children = (
 				CECE5E2524C551E900336672 /* Model */,
 				CECE5E2E24C551F800336672 /* Cell */,
+				CE6E90F524C6C474002B739A /* View */,
 				CECE5E3924C5520A00336672 /* ViewModel */,
 				CECE5E3E24C5521D00336672 /* Controller */,
 				CECE5E3F24C5524100336672 /* Helper */,
 				CECE5E4824C5525800336672 /* Fixtures */,
 				CECE5D6024C5052100336672 /* AppDelegate.swift */,
 				CECE5D6224C5052100336672 /* SceneDelegate.swift */,
-				CE6E90F124C69BBC002B739A /* ContentView.swift */,
 				CE6E90F024C698FA002B739A /* Main.storyboard */,
 				CECE5D6624C5052200336672 /* Assets.xcassets */,
 				CECE5D6B24C5052200336672 /* LaunchScreen.storyboard */,
@@ -416,6 +427,7 @@
 			files = (
 				CECE5E2C24C551E900336672 /* CourseModel.swift in Sources */,
 				CECE5E3D24C5520A00336672 /* ClassScheduleViewModel.swift in Sources */,
+				CE6E90F424C6C3BE002B739A /* SearchBar.swift in Sources */,
 				CE6E90F224C69BBC002B739A /* ContentView.swift in Sources */,
 				CECE5E4324C5524100336672 /* UIColor+Custom.swift in Sources */,
 				CECE5E3524C551F800336672 /* CourseCollectionViewCell.swift in Sources */,
@@ -536,6 +548,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -589,6 +605,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

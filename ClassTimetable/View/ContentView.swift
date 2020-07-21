@@ -10,11 +10,11 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 struct ContentView: View {
-    @State private var studentId = ""
+    @State private var searchText = ""
 
     var body: some View {
         VStack {
-        TextField("學號", text: $studentId)
+            SearchBar(text: $searchText)
             HStack {
                 Text("節次")
                     .frame(width: 100)
